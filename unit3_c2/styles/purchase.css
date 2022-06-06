@@ -1,0 +1,26 @@
+#wallet_balance
+{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:30px;
+}
+#purchased_vouchers
+{
+    display: grid;
+    grid-template-columns: repeat(4,24%);
+     gap: 25px;
+}
+.h3
+{
+    text-align: center;
+}
+.buy_voucher
+{
+    margin-left: 45%;
+}
+#div
+{
+    padding: 3px;
+    box-sizing: border-box;
+    border:1px solid black
+}
