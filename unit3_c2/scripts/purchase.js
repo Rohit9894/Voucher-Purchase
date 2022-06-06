@@ -37,16 +37,20 @@ function addmoney()
 function remove(el,index){
  data.splice(index,1)
  localStorage.setItem("purchase",JSON.stringify(data))
-//  var data=JSON.parse(localStorage.getItem("user"));
-//  var x=data[0].amount;
-//     var y=xel.price;
-//     console.log(y);
-//     data[0].amount=y;
-//     console.log(data)
-    // localStorage.setItem("user",JSON.stringify(data))
-    window.location.reload();
-  
+ 
+  update(el)
     
+}
+function update(el)
+{
+  var data=JSON.parse(localStorage.getItem("user"));
+ var x=data[0].amount;
+    var y=x+el.price;
+    console.log(y);
+    data[0].amount=y;
+    console.log(data)
+    localStorage.setItem("user",JSON.stringify(data))
+    window.location.reload();
 }
 addmoney()
 // list();

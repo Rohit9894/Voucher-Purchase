@@ -55,16 +55,17 @@ function buyvoch(el){
     if(x>el.price)
     {
         alert("succesfully purchased")
+        var y=x-el.price;
+        console.log(y);
+        data[0].amount=y;
+        console.log(data)
+        localStorage.setItem("user",JSON.stringify(data))
     }
     else
     {
         alert("insufficent fund")
     }
-    var y=x-el.price;
-    console.log(y);
-    data[0].amount=y;
-    console.log(data)
-    localStorage.setItem("user",JSON.stringify(data))
+  
     window.location.reload();
   
     
